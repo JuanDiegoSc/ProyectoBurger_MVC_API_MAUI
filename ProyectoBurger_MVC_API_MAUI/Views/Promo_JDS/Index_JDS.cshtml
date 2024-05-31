@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ProyectoBurger_MVC_API_MAUI.Models.Promo_JDS>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create_JDS">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion_JDS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaPromo_JDS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BurgerId_JDS)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion_JDS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPromo_JDS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BurgerId_JDS)
+            </td>
+            <td>
+                    <a asp-action="Edit_JDS" asp-route-id="@item.PromoId_JDS">Edit</a> |
+                    <a asp-action="Details_JDS" asp-route-id="@item.PromoId_JDS">Details</a> |
+                    <a asp-action="Delete_JDS" asp-route-id="@item.PromoId_JDS">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

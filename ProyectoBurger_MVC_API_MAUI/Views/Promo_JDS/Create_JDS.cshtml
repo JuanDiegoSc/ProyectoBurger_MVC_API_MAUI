@@ -1,0 +1,43 @@
+﻿@model ProyectoBurger_MVC_API_MAUI.Models.Promo_JDS
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Promo_JDS</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create_JDS">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Descripcion_JDS" class="control-label"></label>
+                <input asp-for="Descripcion_JDS" class="form-control" />
+                <span asp-validation-for="Descripcion_JDS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaPromo_JDS" class="control-label"></label>
+                <input asp-for="FechaPromo_JDS" class="form-control" />
+                <span asp-validation-for="FechaPromo_JDS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BurgerId_JDS" class="control-label"></label>
+                <input asp-for="BurgerId_JDS" class="form-control" />
+                <span asp-validation-for="BurgerId_JDS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index_JDS">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

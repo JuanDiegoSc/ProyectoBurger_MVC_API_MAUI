@@ -1,0 +1,36 @@
+﻿@model ProyectoBurger_MVC_API_MAUI.Models.Burger_JDS
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Burger_JDS</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name_JDS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name_JDS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WithCheese_JDS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WithCheese_JDS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Precio_JDS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Precio_JDS)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit_JDS" asp-route-id="@Model?.BurgerId_JDS">Edit</a> |
+    <a asp-action="Index_JDS">Back to List</a>
+</div>
