@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ProyectoBurger_API.Controllers;
+using ProyectoBurgerApi.Data;
+using ProyectoBurgerApi.Controllers;
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<ProyectoBurger_APIContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyectoBurger_APIContext") ?? throw new InvalidOperationException("Connection string 'ProyectoBurger_APIContext' not found.")));
+builder.Services.AddDbContext<ProyectoBurgerApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ProyectoBurgerApiContext") ?? throw new InvalidOperationException("Connection string 'ProyectoBurgerApiContext' not found.")));
 
 // Add services to the container.
 
@@ -27,4 +28,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapPromoJdEndpoints();
+
+app.MapBurgerJdEndpoints();
+
 app.Run();
+
