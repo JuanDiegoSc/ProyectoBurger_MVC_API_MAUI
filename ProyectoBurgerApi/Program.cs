@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using ProyectoBurgerApi.Data;
 using ProyectoBurgerApi.Controllers;
+using ProyectoBurgerApi.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ProyectoBurgerApiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ProyectoBurgerApiContext") ?? throw new InvalidOperationException("Connection string 'ProyectoBurgerApiContext' not found.")));

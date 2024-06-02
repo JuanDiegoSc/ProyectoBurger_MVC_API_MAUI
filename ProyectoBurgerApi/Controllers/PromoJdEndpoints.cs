@@ -1,13 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using ProyectoBurgerApi.Data;
 using ProyectoBurgerApi.Data.Models;
 namespace ProyectoBurgerApi.Controllers;
 
 public static class PromoJdEndpoints
 {
-    public static void MapPromoJdEndpoints (this IEndpointRouteBuilder routes)
+    public static void MapPromoJdEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/PromoJd").WithTags(nameof(Promo_JDS));
 
@@ -37,7 +36,7 @@ public static class PromoJdEndpoints
                     .SetProperty(m => m.PromoId_JDS, promoJd.PromoId_JDS)
                     .SetProperty(m => m.BurgerId_JDS, promoJd.BurgerId_JDS)
                     .SetProperty(m => m.FechaPromo_JDS, promoJd.FechaPromo_JDS)
-                    .SetProperty(m => m.BurgerId_JDS , promoJd.BurgerId_JDS)
+                    .SetProperty(m => m.BurgerId_JDS, promoJd.BurgerId_JDS)
                     .SetProperty(m => m.Burger_JDS, promoJd.Burger_JDS)
                     );
             return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
@@ -49,7 +48,7 @@ public static class PromoJdEndpoints
         {
             db.Promo_JDS.Add(promoJd);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/PromoJd/{promoJd.PromoId_JDS}",promoJd);
+            return TypedResults.Created($"/api/PromoJd/{promoJd.PromoId_JDS}", promoJd);
         })
         .WithName("CreatePromoJd")
         .WithOpenApi();
@@ -57,7 +56,7 @@ public static class PromoJdEndpoints
         group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int promoidjds, ProyectoBurgerApiContext db) =>
         {
             var affected = await db.Promo_JDS
-                .Where(model => model.PromoId_JDS  == promoidjds)
+                .Where(model => model.PromoId_JDS == promoidjds)
                 .ExecuteDeleteAsync();
             return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
         })

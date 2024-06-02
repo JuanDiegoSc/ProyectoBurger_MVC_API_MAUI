@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.EntityFrameworkCore;
-using ProyectoBurgerApi.Data;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoBurgerApi.Data.Models;
 

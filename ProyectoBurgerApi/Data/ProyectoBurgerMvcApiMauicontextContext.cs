@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ProyectoBurgerApi.Data.Models;
 
 namespace ProyectoBurgerApi.Data;

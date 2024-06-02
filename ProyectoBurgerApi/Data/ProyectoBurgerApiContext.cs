@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using ProyectoBurgerApi.Data.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace ProyectoBurgerApi.Data
 {
     public class ProyectoBurgerApiContext : DbContext
     {
-        public ProyectoBurgerApiContext (DbContextOptions<ProyectoBurgerApiContext> options)
+        public ProyectoBurgerApiContext(DbContextOptions<ProyectoBurgerApiContext> options)
             : base(options)
         {
         }

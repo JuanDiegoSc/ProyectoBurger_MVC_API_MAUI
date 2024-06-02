@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProyectoBurger_MVC_API_MAUI.Models
 {

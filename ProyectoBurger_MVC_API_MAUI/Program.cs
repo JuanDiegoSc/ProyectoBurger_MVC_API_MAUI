@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using ProyectoBurger_MVC_API_MAUI.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ProyectoBurger_MVC_API_MAUIContext>(options =>

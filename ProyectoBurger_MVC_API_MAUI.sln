@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoBurger_MVC_API_MAUI", "ProyectoBurger_MVC_API_MAUI\ProyectoBurger_MVC_API_MAUI.csproj", "{FFE55F8F-CC5B-4A2F-AA07-F604B1D9E86A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0} = {291B59A7-31A6-400E-AB0A-26079FB8C9E0}
+		{6A33C585-6F8D-436C-B9C1-70AB8D948089} = {6A33C585-6F8D-436C-B9C1-70AB8D948089}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoBurgerApi", "ProyectoBurgerApi\ProyectoBurgerApi.csproj", "{6A33C585-6F8D-436C-B9C1-70AB8D948089}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoBurgerApi", "ProyectoBurgerApi\ProyectoBurgerApi.csproj", "{6A33C585-6F8D-436C-B9C1-70AB8D948089}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProyectoBurgerMAUI_JDS", "ProyectoBurgerMAUI_JDS\ProyectoBurgerMAUI_JDS.csproj", "{291B59A7-31A6-400E-AB0A-26079FB8C9E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,12 @@ Global
 		{6A33C585-6F8D-436C-B9C1-70AB8D948089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A33C585-6F8D-436C-B9C1-70AB8D948089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A33C585-6F8D-436C-B9C1-70AB8D948089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291B59A7-31A6-400E-AB0A-26079FB8C9E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

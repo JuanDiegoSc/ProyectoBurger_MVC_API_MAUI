@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBurgerMAUI_JDS.MainPage">
+    <StackLayout>
+        <Label Text="Ejemplo de app y API en .NET MAUI Juan Diego Silva"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"></Label>
+        <Button Text="Leer Hamburguesas"
+                Clicked="Button_Clicked_JDS"
+                HorizontalOptions="Center"></Button>
+        <ListView x:Name="listView_JDS">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell x:DataType="{Binding name_JDS}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

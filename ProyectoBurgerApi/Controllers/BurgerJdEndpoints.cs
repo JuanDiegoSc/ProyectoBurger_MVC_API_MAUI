@@ -1,13 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.OpenApi;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using ProyectoBurgerApi.Data;
 using ProyectoBurgerApi.Data.Models;
 namespace ProyectoBurgerApi.Controllers;
 
 public static class BurgerJdEndpoints
 {
-    public static void MapBurgerJdEndpoints (this IEndpointRouteBuilder routes)
+    public static void MapBurgerJdEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/BurgerJd").WithTags(nameof(Burger_JDS));
 
@@ -48,7 +47,7 @@ public static class BurgerJdEndpoints
         {
             db.Burger_JDS.Add(burgerJd);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/BurgerJd/{burgerJd.BurgerId_JDS}",burgerJd);
+            return TypedResults.Created($"/api/BurgerJd/{burgerJd.BurgerId_JDS}", burgerJd);
         })
         .WithName("CreateBurgerJd")
         .WithOpenApi();
